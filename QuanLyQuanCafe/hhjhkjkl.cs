@@ -8,5 +8,10 @@ namespace QuanLyQuanCafe
 {
     class hhjhkjkl
     {
+        public string data()
+        {
+            return "false";
+
+        }
     }
 }
