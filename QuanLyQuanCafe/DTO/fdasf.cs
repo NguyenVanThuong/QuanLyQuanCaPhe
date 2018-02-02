@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyQuanCafe.DAO
+namespace QuanLyQuanCafe.DTO
 {
-    class DataProvider
+    class fdasf
     {
-        fdsajfkl
     }
 }
