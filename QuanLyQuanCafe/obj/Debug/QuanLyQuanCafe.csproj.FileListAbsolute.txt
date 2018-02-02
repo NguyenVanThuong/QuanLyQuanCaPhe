@@ -32,3 +32,6 @@ C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQu
 C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.GenerateResource.Cache
 C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.exe
 C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb
+E:\SQL\New folder\QuanLyQuanCaphe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe.config
+E:\SQL\New folder\QuanLyQuanCaphe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.exe
+E:\SQL\New folder\QuanLyQuanCaphe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb
