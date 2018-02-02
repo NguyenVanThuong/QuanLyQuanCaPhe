@@ -93,6 +93,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="glnfskgljslfjg.cs" />
     <Compile Include="hhjhkjkl.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
