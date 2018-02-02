@@ -25,6 +25,7 @@ namespace QuanLyQuanCafe
 
             dtgvAccount.DataSource = (from f in db.Accounts where f.idStatusDelete == 0 select f).ToList();
             dtgvTable.DataSource = (from f in db.TableFoods where f.idStatusDelete == 0 select f).ToList();
+
             dtgvFood.DataSource = (from f in db.Foods where f.idStatusDelete == 0 select f).ToList();
             //dtgvDoanhThu.DataSource = db.Bills.ToList();
             LoadBill();
