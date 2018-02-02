@@ -13,7 +13,7 @@ namespace QuanLyQuanCafe
 {
     public partial class TableManagement : Form
     {
-        QuanLyQuanCapheEntities db = new QuanLyQuanCapheEntities();
+        QuanLyQuanCapheEntities1 db = new QuanLyQuanCapheEntities1();
         List<Button> lstButton = new List<Button>();
         
 

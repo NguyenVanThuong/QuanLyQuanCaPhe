@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyQuanCafe
+namespace QuanLyQuanCaPhe
 {
     public partial class Regist : Form
     {
-        QuanLyQuanCapheEntities1 db = new QuanLyQuanCapheEntities1();
+        QuanLyQuanCapheEntities db = new QuanLyQuanCapheEntities();
 
         public Regist()
         {

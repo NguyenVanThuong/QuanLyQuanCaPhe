@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyQuanCafe
+namespace QuanLyQuanCaPhe
 {
     public partial class Login : Form
     {
@@ -49,7 +49,7 @@ namespace QuanLyQuanCafe
             {
                 
                 string AccountName = check.Username;
-                TableManagement t = new TableManagement(AccountName);
+                //TableManagement t = new TableManagement(AccountName);
                 this.Hide();
                 t.ShowDialog();
                 this.Show();

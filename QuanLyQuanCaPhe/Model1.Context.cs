@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLyQuanCafe
+namespace QuanLyQuanCaPhe
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QuanLyQuanCapheEntities1 : DbContext
+    public partial class QuanLyQuanCapheEntities : DbContext
     {
-        public QuanLyQuanCapheEntities1()
-            : base("name=QuanLyQuanCapheEntities1")
+        public QuanLyQuanCapheEntities()
+            : base("name=QuanLyQuanCapheEntities")
         {
         }
     

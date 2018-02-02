@@ -12,7 +12,7 @@ namespace QuanLyQuanCafe
 {
     public partial class AccountInfo : Form
     {
-        QuanLyQuanCapheEntities db = new QuanLyQuanCapheEntities();
+        QuanLyQuanCapheEntities1 db = new QuanLyQuanCapheEntities1();
 
         private string Name;
         public string name

@@ -137,7 +137,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="QuanLyQuanCapheEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="QuanLyQuanCaPheEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Accounts" EntityType="Self.Account" />
     <EntitySet Name="Bills" EntityType="Self.Bill" />
     <EntitySet Name="BillDetails" EntityType="Self.BillDetail" />
