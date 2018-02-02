@@ -79,6 +79,8 @@
     <Compile Include="BillDetail.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DTO\fdasf.cs" />
     <Compile Include="Food.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
