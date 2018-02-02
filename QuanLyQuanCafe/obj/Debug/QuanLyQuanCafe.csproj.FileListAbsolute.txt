@@ -1,0 +1,34 @@
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe.config
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.pdb
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csprojResolveAssemblyReference.cache
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Login.resources
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Properties.Resources.resources
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.GenerateResource.Cache
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.exe
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.TableManagement.resources
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.AccountInfo.resources
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Admin.resources
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\EntityFramework.dll
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\EntityFramework.SqlServer.dll
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\EntityFramework.xml
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\EntityFramework.SqlServer.xml
+E:\C#\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Regist.resources
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe.config
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.pdb
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\EntityFramework.dll
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\EntityFramework.xml
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csprojResolveAssemblyReference.cache
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.AccountInfo.resources
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Admin.resources
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Login.resources
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Properties.Resources.resources
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Regist.resources
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.TableManagement.resources
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.GenerateResource.Cache
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.exe
+C:\Users\Robin\Desktop\C# basic\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb

@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyQuanCafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="idStatusDelete" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="StatusDelete" Relationship="Self.FK__Account__idStatu__182C9B23" FromRole="Account" ToRole="StatusDelete" />
+    <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__userName__25869641" FromRole="Account" ToRole="Bill" />
+  </EntityType>
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateIn" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DateOut" Type="DateTime" Precision="0" />
+    <Property Name="idTable" Type="Int32" Nullable="false" />
+    <Property Name="userName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idStatusDelete" Type="Int32" Nullable="false" />
+    <Property Name="stat" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Bill__userName__25869641" FromRole="Bill" ToRole="Account" />
+    <NavigationProperty Name="StatusDelete" Relationship="Self.FK__Bill__idStatusDe__267ABA7A" FromRole="Bill" ToRole="StatusDelete" />
+    <NavigationProperty Name="TableFood" Relationship="Self.FK__Bill__idTable__24927208" FromRole="Bill" ToRole="TableFood" />
+    <NavigationProperty Name="BillDetails" Relationship="Self.FK__BillDetai__idBil__2A4B4B5E" FromRole="Bill" ToRole="BillDetail" />
+  </EntityType>
+  <EntityType Name="BillDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idBill" Type="Int32" Nullable="false" />
+    <Property Name="idFood" Type="Int32" Nullable="false" />
+    <Property Name="idStatusDelete" Type="Int32" Nullable="false" />
+    <Property Name="COUNT" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bill" Relationship="Self.FK__BillDetai__idBil__2A4B4B5E" FromRole="BillDetail" ToRole="Bill" />
+    <NavigationProperty Name="Food" Relationship="Self.FK__BillDetai__idFoo__2B3F6F97" FromRole="BillDetail" ToRole="Food" />
+    <NavigationProperty Name="StatusDelete" Relationship="Self.FK__BillDetai__idSta__2C3393D0" FromRole="BillDetail" ToRole="StatusDelete" />
+  </EntityType>
+  <EntityType Name="Food">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idCategory" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="idStatusDelete" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BillDetails" Relationship="Self.FK__BillDetai__idFoo__2B3F6F97" FromRole="Food" ToRole="BillDetail" />
+    <NavigationProperty Name="FoodCategory" Relationship="Self.FK__Food__idCategory__1ED998B2" FromRole="Food" ToRole="FoodCategory" />
+    <NavigationProperty Name="StatusDelete" Relationship="Self.FK__Food__idStatusDe__1FCDBCEB" FromRole="Food" ToRole="StatusDelete" />
+  </EntityType>
+  <EntityType Name="FoodCategory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idStatusDelete" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Foods" Relationship="Self.FK__Food__idCategory__1ED998B2" FromRole="FoodCategory" ToRole="Food" />
+    <NavigationProperty Name="StatusDelete" Relationship="Self.FK__FoodCateg__idSta__1B0907CE" FromRole="FoodCategory" ToRole="StatusDelete" />
+  </EntityType>
+  <EntityType Name="StatusDelete">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stat" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__idStatu__182C9B23" FromRole="StatusDelete" ToRole="Account" />
+    <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__idStatusDe__267ABA7A" FromRole="StatusDelete" ToRole="Bill" />
+    <NavigationProperty Name="BillDetails" Relationship="Self.FK__BillDetai__idSta__2C3393D0" FromRole="StatusDelete" ToRole="BillDetail" />
+    <NavigationProperty Name="Foods" Relationship="Self.FK__Food__idStatusDe__1FCDBCEB" FromRole="StatusDelete" ToRole="Food" />
+    <NavigationProperty Name="FoodCategories" Relationship="Self.FK__FoodCateg__idSta__1B0907CE" FromRole="StatusDelete" ToRole="FoodCategory" />
+    <NavigationProperty Name="TableFoods" Relationship="Self.FK__TableFood__idSta__145C0A3F" FromRole="StatusDelete" ToRole="TableFood" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TableFood">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="stat" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idStatusDelete" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__idTable__24927208" FromRole="TableFood" ToRole="Bill" />
+    <NavigationProperty Name="StatusDelete" Relationship="Self.FK__TableFood__idSta__145C0A3F" FromRole="TableFood" ToRole="StatusDelete" />
+  </EntityType>
+  <Association Name="FK__Account__idStatu__182C9B23">
+    <End Role="StatusDelete" Type="Self.StatusDelete" Multiplicity="1" />
+    <End Role="Account" Type="Self.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusDelete">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="idStatusDelete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Bill__userName__25869641">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Username" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="userName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Bill__idStatusDe__267ABA7A">
+    <End Role="StatusDelete" Type="Self.StatusDelete" Multiplicity="1" />
+    <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusDelete">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="idStatusDelete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Bill__idTable__24927208">
+    <End Role="TableFood" Type="Self.TableFood" Multiplicity="1" />
+    <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TableFood">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="idTable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BillDetai__idBil__2A4B4B5E">
+    <End Role="Bill" Type="Self.Bill" Multiplicity="1" />
+    <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bill">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BillDetail">
+        <PropertyRef Name="idBill" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BillDetai__idFoo__2B3F6F97">
+    <End Role="Food" Type="Self.Food" Multiplicity="1" />
+    <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Food">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BillDetail">
+        <PropertyRef Name="idFood" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BillDetai__idSta__2C3393D0">
+    <End Role="StatusDelete" Type="Self.StatusDelete" Multiplicity="1" />
+    <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusDelete">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BillDetail">
+        <PropertyRef Name="idStatusDelete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Food__idCategory__1ED998B2">
+    <End Role="FoodCategory" Type="Self.FoodCategory" Multiplicity="1" />
+    <End Role="Food" Type="Self.Food" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FoodCategory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Food">
+        <PropertyRef Name="idCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Food__idStatusDe__1FCDBCEB">
+    <End Role="StatusDelete" Type="Self.StatusDelete" Multiplicity="1" />
+    <End Role="Food" Type="Self.Food" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusDelete">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Food">
+        <PropertyRef Name="idStatusDelete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FoodCateg__idSta__1B0907CE">
+    <End Role="StatusDelete" Type="Self.StatusDelete" Multiplicity="1" />
+    <End Role="FoodCategory" Type="Self.FoodCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusDelete">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="FoodCategory">
+        <PropertyRef Name="idStatusDelete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TableFood__idSta__145C0A3F">
+    <End Role="StatusDelete" Type="Self.StatusDelete" Multiplicity="1" />
+    <End Role="TableFood" Type="Self.TableFood" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusDelete">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TableFood">
+        <PropertyRef Name="idStatusDelete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyQuanCafeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Bills" EntityType="Self.Bill" />
+    <EntitySet Name="BillDetails" EntityType="Self.BillDetail" />
+    <EntitySet Name="Foods" EntityType="Self.Food" />
+    <EntitySet Name="FoodCategories" EntityType="Self.FoodCategory" />
+    <EntitySet Name="StatusDeletes" EntityType="Self.StatusDelete" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TableFoods" EntityType="Self.TableFood" />
+    <AssociationSet Name="FK__Account__idStatu__182C9B23" Association="Self.FK__Account__idStatu__182C9B23">
+      <End Role="StatusDelete" EntitySet="StatusDeletes" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Bill__userName__25869641" Association="Self.FK__Bill__userName__25869641">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Bill" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Bill__idStatusDe__267ABA7A" Association="Self.FK__Bill__idStatusDe__267ABA7A">
+      <End Role="StatusDelete" EntitySet="StatusDeletes" />
+      <End Role="Bill" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Bill__idTable__24927208" Association="Self.FK__Bill__idTable__24927208">
+      <End Role="TableFood" EntitySet="TableFoods" />
+      <End Role="Bill" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BillDetai__idBil__2A4B4B5E" Association="Self.FK__BillDetai__idBil__2A4B4B5E">
+      <End Role="Bill" EntitySet="Bills" />
+      <End Role="BillDetail" EntitySet="BillDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BillDetai__idFoo__2B3F6F97" Association="Self.FK__BillDetai__idFoo__2B3F6F97">
+      <End Role="Food" EntitySet="Foods" />
+      <End Role="BillDetail" EntitySet="BillDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BillDetai__idSta__2C3393D0" Association="Self.FK__BillDetai__idSta__2C3393D0">
+      <End Role="StatusDelete" EntitySet="StatusDeletes" />
+      <End Role="BillDetail" EntitySet="BillDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Food__idCategory__1ED998B2" Association="Self.FK__Food__idCategory__1ED998B2">
+      <End Role="FoodCategory" EntitySet="FoodCategories" />
+      <End Role="Food" EntitySet="Foods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Food__idStatusDe__1FCDBCEB" Association="Self.FK__Food__idStatusDe__1FCDBCEB">
+      <End Role="StatusDelete" EntitySet="StatusDeletes" />
+      <End Role="Food" EntitySet="Foods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FoodCateg__idSta__1B0907CE" Association="Self.FK__FoodCateg__idSta__1B0907CE">
+      <End Role="StatusDelete" EntitySet="StatusDeletes" />
+      <End Role="FoodCategory" EntitySet="FoodCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TableFood__idSta__145C0A3F" Association="Self.FK__TableFood__idSta__145C0A3F">
+      <End Role="StatusDelete" EntitySet="StatusDeletes" />
+      <End Role="TableFood" EntitySet="TableFoods" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
